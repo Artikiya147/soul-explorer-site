@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { Phase } from "./phase";
 import { FaqAccordion } from "./faq-accordion";
 import { PrepGuideForm } from "./prep-guide-form";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 import "./qhht.css";
 
 export const metadata: Metadata = {
@@ -479,6 +480,7 @@ export default function QHHTPage() {
         </section>
 
         {/* FIELD NOTES */}
+        {SHOW_TESTIMONIALS && (
         <section className="section">
           <div className="wrap">
             <div className="section-head center">
@@ -539,6 +541,7 @@ export default function QHHTPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PREP LEAD MAGNET */}
         <section className="section section--tint grain">
@@ -564,6 +567,7 @@ export default function QHHTPage() {
         </section>
 
         {/* TESTIMONIAL */}
+        {SHOW_TESTIMONIALS && (
         <section className="section">
           <div className="wrap">
             <div className="quote-band">
@@ -583,6 +587,7 @@ export default function QHHTPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* FAQ */}
         <section className="section section--tint grain">

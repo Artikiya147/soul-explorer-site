@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { FaqAccordion } from "../qhht/faq-accordion";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 import "./bqh.css";
 
 export const metadata: Metadata = {
@@ -306,6 +307,7 @@ export default function BQHPage() {
         </section>
 
         {/* TESTIMONIALS */}
+        {SHOW_TESTIMONIALS && (
         <section className="section">
           <div className="wrap">
             <div className="section-head center">
@@ -334,6 +336,7 @@ export default function BQHPage() {
             </p>
           </div>
         </section>
+        )}
 
         {/* FAQ */}
         <section className="section section--tint grain">

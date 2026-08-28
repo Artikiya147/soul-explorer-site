@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { MeditationPlayer } from "./audio-player";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 import "./meditations.css";
 
 export const metadata: Metadata = {
@@ -380,6 +381,7 @@ export default function MeditationsPage() {
         </section>
 
         {/* TESTIMONIALS */}
+        {SHOW_TESTIMONIALS && (
         <section className="section">
           <div className="wrap">
             <div className="section-head center">
@@ -406,6 +408,7 @@ export default function MeditationsPage() {
             </p>
           </div>
         </section>
+        )}
 
         {/* CTA */}
         <section className="cta-band grain">

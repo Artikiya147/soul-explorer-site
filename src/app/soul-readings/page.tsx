@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { FaqAccordion } from "../qhht/faq-accordion";
 import { SoulMap } from "./soul-map";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 import "./soul-readings.css";
 
 export const metadata: Metadata = {
@@ -389,6 +390,7 @@ export default function SoulReadingsPage() {
         </section>
 
         {/* TESTIMONIAL */}
+        {SHOW_TESTIMONIALS && (
         <section className="section section--dark grain grain-dark">
           <div className="wrap">
             <div className="quote-band">
@@ -408,6 +410,7 @@ export default function SoulReadingsPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* PRICING */}
         <section className="section">

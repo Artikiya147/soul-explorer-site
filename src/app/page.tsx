@@ -1,6 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { FindYourPath } from "@/components/find-your-path";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 
 export default function HomePage() {
   return (
@@ -481,6 +482,7 @@ export default function HomePage() {
         </section>
 
         {/* ================= 05.5 · TESTIMONIALS ================= */}
+        {SHOW_TESTIMONIALS && (
         <section className="section">
           <div className="wrap">
             <div className="section-head center">
@@ -541,6 +543,7 @@ export default function HomePage() {
             </p>
           </div>
         </section>
+        )}
 
         {/* ================= 06 · STUDIO ================= */}
         <section className="studio-band grain grain-dark" id="studio">

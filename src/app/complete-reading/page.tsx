@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { BeginReadingButton } from "./begin-reading-button";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 import "./complete-reading.css";
 
 export const metadata: Metadata = {
@@ -270,6 +271,7 @@ export default function CompleteReadingPage() {
           </div>
         </section>
 
+        {SHOW_TESTIMONIALS && (
         <section className="section section--tint grain">
           <div className="wrap">
             <div className="quote-band">
@@ -284,6 +286,7 @@ export default function CompleteReadingPage() {
             </div>
           </div>
         </section>
+        )}
 
         <section className="cta-band grain">
           <span className="kicker">when your soul is ready</span>

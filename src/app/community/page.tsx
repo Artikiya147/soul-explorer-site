@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { SHOW_TESTIMONIALS } from "@/lib/testimonials-flag";
 
 export const metadata: Metadata = {
   title: "The Community, Courses & Circle on Skool · Soul Explorer",
@@ -231,6 +232,7 @@ export default function CommunityPage() {
         </section>
 
         {/* TESTIMONIALS */}
+        {SHOW_TESTIMONIALS && (
         <section className="section section--tint grain">
           <div className="wrap">
             <div className="section-head center">
@@ -257,6 +259,7 @@ export default function CommunityPage() {
             </p>
           </div>
         </section>
+        )}
 
         {/* CTA */}
         <section className="cta-band grain">
