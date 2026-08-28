@@ -1,0 +1,22 @@
+{
+  "la-postina-hero": {
+    "kind": "image",
+    "filename": "la-postina-hero.png",
+    "uploadedAt": "2026-08-26T09:21:52.650Z"
+  },
+  "la-postina-image": {
+    "kind": "image",
+    "filename": "la-postina-image.jpeg",
+    "uploadedAt": "2026-08-26T09:22:03.125Z"
+  },
+  "oracle-widget-image": {
+    "kind": "image",
+    "filename": "oracle-widget-image.png",
+    "uploadedAt": "2026-08-26T09:44:38.287Z"
+  },
+  "oracle-widget-hero": {
+    "kind": "image",
+    "filename": "oracle-widget-hero.png",
+    "uploadedAt": "2026-08-26T09:46:59.631Z"
+  }
+}

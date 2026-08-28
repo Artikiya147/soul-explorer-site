@@ -1,0 +1,10 @@
+.bqh-hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(36px,5vw,80px);align-items:center;}
+.bqh-hero .ph-art{display:flex;justify-content:center;position:relative;}
+.bqh-hero .ph-art .polaroid{max-width:360px;width:100%;}
+.bqh-hero .ph-art .ph{height:440px;}
+@media (max-width:900px){
+  .bqh-hero .wrap{grid-template-columns:1fr;}
+  .bqh-hero .ph-art{order:-1;margin-bottom:14px;}
+  .bqh-hero .ph-art .polaroid{max-width:280px;}
+  .bqh-hero .ph-art .ph{height:360px;}
+}

@@ -1,0 +1,59 @@
+.sr-hero-photo{width:100%;max-height:62vh;overflow:hidden;line-height:0;}
+.sr-hero-photo img{width:100%;display:block;object-fit:cover;max-height:62vh;}
+
+.sr-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(160deg,var(--parchment-2),var(--parchment-3));
+  border:1px dashed rgba(126,114,168,.4);
+  border-radius:16px;
+  color:var(--lavender-deep);
+  font-family:var(--sans);
+  font-size:12px;
+  letter-spacing:.06em;
+  padding:20px;
+}
+
+/* Soul map animation — elements start invisible, triggered by IntersectionObserver */
+#soulmapSvg .sm-ring,
+#soulmapSvg .sm-lines line,
+#soulmapSvg .sm-ticks line,
+#soulmapSvg .sm-triangle,
+#soulmapSvg .sm-planets,
+#soulmapSvg .sm-planet,
+#soulmapSvg .sm-sigil,
+#soulmapSvg .sm-glow { opacity:0; }
+
+#soulmapSvg.sm-active .sm-glow{animation:smFade 1.2s ease .05s forwards;}
+#soulmapSvg.sm-active .sm-ring{
+  stroke-dasharray:var(--r) var(--r);
+  stroke-dashoffset:var(--r);
+  animation:smDraw 1.4s cubic-bezier(.4,0,.2,1) var(--d) forwards;
+}
+#soulmapSvg.sm-active .sm-ring-dash{stroke-dasharray:2 6;}
+#soulmapSvg.sm-active .sm-lines{animation:smFade .7s ease var(--d) forwards;}
+#soulmapSvg.sm-active .sm-ticks{animation:smFade .5s ease var(--d) forwards;}
+#soulmapSvg.sm-active .sm-triangle{
+  stroke-dasharray:600 600;
+  stroke-dashoffset:600;
+  animation:smDraw 1.2s cubic-bezier(.4,0,.2,1) var(--d) forwards,smGlow2 2.8s ease 2.8s infinite;
+}
+#soulmapSvg.sm-active .sm-planets{animation:smFade .4s ease var(--d) forwards;}
+#soulmapSvg.sm-active .sm-planet{animation:smPop .55s cubic-bezier(.34,1.56,.64,1) calc(1.9s + var(--pd)) both;}
+#soulmapSvg.sm-active .sm-sigil{
+  transform-origin:200px 200px;
+  animation:smFade .6s ease var(--d) forwards, smSpin 18s linear 2.6s infinite;
+}
+
+@keyframes smDraw{to{stroke-dashoffset:0;opacity:1;}}
+@keyframes smFade{to{opacity:1;}}
+@keyframes smPop{0%{opacity:0;transform:scale(0);}100%{opacity:1;transform:scale(1);}}
+@keyframes smSpin{to{transform:rotate(360deg);}}
+@keyframes smGlow2{0%,100%{opacity:.8;}50%{opacity:1;filter:drop-shadow(0 0 6px #9B8EC4);}}
+@media(prefers-reduced-motion:reduce){
+  #soulmapSvg.sm-active .sm-ring,
+  #soulmapSvg.sm-active .sm-triangle,
+  #soulmapSvg.sm-active .sm-sigil{animation:smFade .6s ease var(--d) forwards;}
+}

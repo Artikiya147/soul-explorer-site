@@ -1,0 +1,117 @@
+/* ---------- Cookie consent banner ---------- */
+.cookie-banner{
+  position:fixed;left:0;right:0;bottom:0;z-index:95;
+  background:var(--dark);color:var(--parchment);
+  padding:20px clamp(20px,4vw,32px);
+  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+  box-shadow:0 -20px 50px -20px rgba(0,0,0,.5);
+  transform:translateY(100%);
+  transition:transform .5s cubic-bezier(.22,.68,0,1);
+}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-banner p{
+  flex:1 1 320px;margin:0;font-size:14px;line-height:1.6;color:rgba(245,240,235,.85);
+}
+.cookie-banner p a{color:var(--lavender-soft);text-decoration:underline;text-underline-offset:2px;}
+.cookie-banner-actions{display:flex;gap:12px;flex:0 0 auto;}
+.cookie-banner-actions button{
+  font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.04em;
+  padding:11px 22px;border-radius:30px;cursor:pointer;border:none;white-space:nowrap;
+}
+.cookie-banner-actions .cb-ok{background:var(--lavender);color:#2a2330;}
+.cookie-banner-actions .cb-ok:hover{background:var(--lavender-deep);color:#fff;}
+
+/* ---------- Legal / policy pages ---------- */
+.legal{max-width:760px;margin:0 auto;padding:clamp(90px,14vh,130px) var(--gutter) 100px;}
+.legal-head{margin-bottom:44px;}
+.legal-head h1{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,58px);line-height:1.04;margin:0 0 12px;}
+.legal-head h1 em{font-style:italic;color:var(--lavender-deep);}
+.legal-updated{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe);}
+
+.legal-body h2{font-family:var(--serif);font-weight:500;font-size:26px;margin:44px 0 14px;}
+.legal-body h2:first-child{margin-top:0;}
+.legal-body h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:26px 0 10px;}
+.legal-body p{font-size:16px;line-height:1.8;color:var(--ink-soft);margin:0 0 16px;}
+.legal-body ul{margin:0 0 16px;padding-left:22px;}
+.legal-body li{font-size:16px;line-height:1.8;color:var(--ink-soft);margin-bottom:8px;}
+.legal-body strong{color:var(--ink);font-weight:600;}
+.legal-body a{color:var(--lavender-deep);}
+
+.legal-notice{
+  background:var(--parchment-2);border-radius:12px;padding:18px 22px;margin-bottom:40px;
+  font-size:14px;line-height:1.7;color:var(--ink-soft);font-style:italic;
+}
+
+.legal-entity{
+  background:#fbf7f1;border:1px solid rgba(196,181,160,.5);border-radius:12px;
+  padding:22px 26px;margin:24px 0 32px;
+}
+.legal-entity dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;}
+.legal-entity dt{font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--taupe);}
+.legal-entity dd{font-size:14px;color:var(--ink);margin:0;}
+
+.legal-toc{display:flex;flex-direction:column;gap:8px;margin:0 0 40px;padding:20px 24px;background:#fbf7f1;border-radius:12px;}
+.legal-toc a{font-size:14px;color:var(--ink-soft);text-decoration:none;}
+.legal-toc a:hover{color:var(--lavender-deep);}
+
+/* ---------- WhatsApp bubble ---------- */
+.wa-wrap{position:fixed;right:24px;bottom:24px;z-index:96;display:flex;flex-direction:column;align-items:flex-end;gap:16px;}
+.wa-bubble{
+  width:58px;height:58px;border-radius:50%;border:none;cursor:pointer;flex:0 0 auto;
+  background:#25D366;color:#fff;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 14px 30px -10px rgba(0,0,0,.45);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.wa-bubble svg{width:30px;height:30px;}
+.wa-bubble:hover{transform:scale(1.07);box-shadow:0 18px 36px -8px rgba(0,0,0,.5);}
+.wa-tip{
+  position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%);
+  background:var(--dark);color:var(--parchment);
+  font-family:var(--sans);font-size:13px;font-weight:600;white-space:nowrap;
+  padding:8px 14px;border-radius:8px;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;
+}
+.wa-tip::after{
+  content:"";position:absolute;left:100%;top:50%;transform:translateY(-50%);
+  border:6px solid transparent;border-left-color:var(--dark);
+}
+.wa-bubble:hover .wa-tip{opacity:1;}
+
+.wa-panel{
+  width:min(320px,calc(100vw - 48px));background:#fbf7f1;color:var(--ink);
+  border:1px solid rgba(196,181,160,.5);border-radius:16px;
+  padding:22px 22px 20px;position:relative;
+  box-shadow:0 30px 60px -24px rgba(26,23,20,.5);
+}
+.wa-panel-close{
+  position:absolute;top:14px;right:14px;background:none;border:none;cursor:pointer;
+  color:var(--taupe);padding:2px;line-height:0;
+}
+.wa-panel-close:hover{color:var(--ink);}
+.wa-panel-close svg{width:18px;height:18px;}
+.wa-panel-title{font-family:var(--serif);font-size:20px;color:var(--ink);margin:0 0 14px;}
+.wa-panel-cta{
+  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  background:#25D366;color:#fff;font-family:var(--sans);font-weight:600;font-size:14px;
+  padding:12px 16px;border-radius:30px;text-decoration:none;
+}
+.wa-panel-cta:hover{background:#1fb959;}
+.wa-panel-sub{font-size:13px;color:var(--ink-soft);margin:18px 0 12px;text-align:center;}
+.wa-panel-form{display:flex;flex-direction:column;gap:10px;}
+.wa-panel-form input,.wa-panel-form textarea{
+  font-family:var(--sans);font-size:14px;color:var(--ink);
+  background:#fff;border:1px solid rgba(196,181,160,.6);border-radius:8px;
+  padding:10px 12px;resize:none;
+}
+.wa-panel-form input:focus,.wa-panel-form textarea:focus{outline:none;border-color:var(--lavender-deep);}
+.wa-panel-error{font-size:12px;color:#b3543e;margin:0;}
+.wa-panel-form .btn-ghost{align-self:center;margin-top:2px;}
+.wa-panel-sent{font-size:14px;line-height:1.6;color:var(--ink-soft);text-align:center;margin:0;}
+
+@media (max-width:640px){
+  .wa-wrap{right:16px;bottom:16px;}
+  .wa-bubble{width:52px;height:52px;}
+  .wa-bubble svg{width:27px;height:27px;}
+  .wa-tip{display:none;}
+}

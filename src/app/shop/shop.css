@@ -1,0 +1,38 @@
+.bundle-card{
+  background:linear-gradient(135deg,#2c2740,#1c1830);
+  border:1px solid rgba(214,200,245,.2);
+  border-radius:20px;
+  padding:clamp(30px,4vw,52px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(28px,4vw,52px);
+  align-items:center;
+  margin:0 auto clamp(28px,4vw,44px);
+  max-width:880px;
+}
+@media (max-width:760px){.bundle-card{grid-template-columns:1fr;}}
+.bundle-best{font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--turquoise);}
+.bundle-card h3{font-family:var(--serif);font-weight:300;font-size:clamp(24px,3.2vw,40px);color:var(--parchment);margin:10px 0 14px;line-height:1.1;}
+.bundle-card h3 em{font-style:italic;color:var(--lavender-soft);}
+.bundle-card p{font-size:14px;line-height:1.7;color:rgba(245,240,235,.72);margin:0 0 22px;max-width:38ch;}
+.bundle-list{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:8px;}
+.bundle-list li{font-size:13px;color:rgba(245,240,235,.7);display:flex;gap:10px;align-items:baseline;}
+.bundle-list li span{color:var(--turquoise);font-size:11px;}
+.bundle-price-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.bundle-price{font-family:var(--serif);font-size:36px;color:var(--parchment);}
+.bundle-price small{font-size:16px;color:rgba(245,240,235,.5);text-decoration:line-through;margin-left:6px;}
+.bundle-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.bundle-tile{background:rgba(214,200,245,.07);border:1px solid rgba(214,200,245,.15);border-radius:12px;padding:16px;text-align:center;}
+.bundle-tile .glyph{font-size:28px;margin-bottom:8px;}
+.bundle-tile .nm{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--parchment);}
+
+.track-note{text-align:center;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,240,235,.45);margin-bottom:22px;}
+.track-card{background:#1c1830;border-color:rgba(214,200,245,.15);}
+.track-card .cover{background:linear-gradient(160deg,#3a3357,#1c1830);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;}
+.track-card .cover span{font-size:48px;}
+.track-card h3{color:var(--parchment);}
+.track-card p{color:rgba(245,240,235,.65);}
+.track-card .product-price{color:var(--lavender-soft);}
+
+.med-more{text-align:center;margin-top:36px;}
+.med-more a{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--lavender-soft);text-decoration:none;border-bottom:1px solid rgba(185,175,214,.4);padding-bottom:2px;}

@@ -1,0 +1,6 @@
+.qmv-hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(36px,5vw,80px);align-items:center;}
+.qmv-hero .ph-art{display:flex;justify-content:center;position:relative;}
+@media (max-width:900px){
+  .qmv-hero .wrap{grid-template-columns:1fr;}
+  .qmv-hero .ph-art{order:-1;margin-bottom:14px;}
+}

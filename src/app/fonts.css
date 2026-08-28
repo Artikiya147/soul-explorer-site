@@ -1,0 +1,10 @@
+/* Remaps the real design's font variables onto next/font's self-hosted,
+   optimized font loading instead of the legacy <link> tag. Must be
+   imported after legacy-styles.css so this :root wins. */
+:root {
+  --serif: var(--font-newsreader), Georgia, serif;
+  --sans: var(--font-hanken), system-ui, sans-serif;
+  --script: var(--font-sacramento), cursive;
+  --formal: var(--font-pinyon), cursive;
+  --hand: var(--font-caveat), cursive;
+}

@@ -1,0 +1,38 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { cartAdd } from "@/lib/cart";
+
+const Arrow = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export function BeginReadingButton({ className }: { className: string }) {
+  const router = useRouter();
+
+  return (
+    <button
+      className={className}
+      style={{ cursor: "pointer" }}
+      onClick={() => {
+        cartAdd(
+          {
+            id: "lettura",
+            name: "Complete Soul Reading",
+            price: 222,
+            img: "/assets/product-soulreading.png",
+            meta: "Digital · personalized PDF",
+          },
+          1,
+          false
+        );
+        router.push("/cart");
+      }}
+    >
+      Begin my reading · €222
+      <Arrow />
+    </button>
+  );
+}
