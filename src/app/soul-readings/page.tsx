@@ -156,6 +156,11 @@ export default function SoulReadingsPage() {
               </p>
               <div className="prose">
                 <p className="lead">
+                  Maybe you keep circling the same pattern and can&apos;t
+                  quite see why. Maybe a season is turning and you can
+                  feel it, but can&apos;t yet name what&apos;s coming.
+                </p>
+                <p>
                   A reading is a conversation with the unseen, held on
                   your behalf, and offered back to you in plain, kind
                   language.

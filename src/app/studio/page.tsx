@@ -131,6 +131,13 @@ export default function StudioPage() {
               A brochure isn&apos;t a business. Your site should be a{" "}
               <em>working practice</em>, not just a pretty page about one.
             </h2>
+            <p className="belief-lede">
+              Maybe you&apos;re stitching together a booking link, a
+              Linktree and a template that never quite felt like you.
+              Maybe you&apos;re losing clients in the gap between a DM
+              and an actual appointment. A practice deserves a home that
+              works as hard as you do.
+            </p>
           </div>
         </section>
 

@@ -111,6 +111,12 @@ export default function SoulSystemsPage() {
             </div>
             <div className="prose">
               <p>
+                Maybe you&apos;ve already tried to write your own
+                homepage and nothing sounded true. Maybe you can feel
+                the work you&apos;re meant to do, but can&apos;t yet put
+                it into words a stranger would understand.
+              </p>
+              <p>
                 Most practitioners come ready to build. But a site built
                 before the mission is clear ends up describing work
                 that hasn&apos;t fully settled yet. It fits for a
