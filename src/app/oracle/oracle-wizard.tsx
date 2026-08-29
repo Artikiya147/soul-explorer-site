@@ -19,10 +19,10 @@ const Q1_OPTS = [
   { gl: "❍", val: "connection", label: "Connection, I feel alone" },
 ];
 const Q2_OPTS = [
-  { gl: "☉", val: "in my body", label: "In my body" },
-  { gl: "♡", val: "in my heart", label: "In my heart" },
-  { gl: "✧", val: "in my mind", label: "In my mind" },
-  { gl: "☾", val: "in my dreams", label: "In my dreams" },
+  { gl: "☉", val: "your body", label: "In my body" },
+  { gl: "♡", val: "your heart", label: "In my heart" },
+  { gl: "✧", val: "your mind", label: "In my mind" },
+  { gl: "☾", val: "your dreams", label: "In my dreams" },
 ];
 const Q3_OPTS = [
   { gl: "❉", val: "a long winter", label: "A long winter" },
@@ -54,22 +54,22 @@ function fallbackReading(
   const n = name || "beloved";
   const c = cards;
   const intent = intention ? `"${intention}"` : "something you could not quite name";
-  const where = (q2 || "in the quiet of you").toLowerCase();
+  const where = (q2 || "the quiet of you").toLowerCase();
   const season = (q3 || "a tender season").toLowerCase();
   const hash =
     (c[0].key.charCodeAt(0) + c[1].key.charCodeAt(1) + c[2].key.charCodeAt(2)) % 5;
 
   if (hash === 0) {
-    return `Dear ${n}, you came carrying ${intent}, and three presences arrived to answer each from a different direction.\n\n${c[0].name} came first, quietly. ${c[0].msg} It speaks to what you carry: the root beneath the weight.\n\n${c[1].name} came second, into the present moment. ${c[1].msg} You feel it ${where}. This is not against you. It is the current moving you truer.\n\n${c[2].name} arrived last, from ahead. ${c[2].msg} ${season.charAt(0).toUpperCase() + season.slice(1)} is exactly when this kind of light begins.\n\nThe stars heard you before you spoke.\n\nLiora`;
+    return `Dear ${n}, you came carrying ${intent}, and three presences arrived to answer each from a different direction.\n\n${c[0].name} came first, quietly. ${c[0].msg} It speaks to what you carry: the root beneath the weight.\n\n${c[1].name} came second, into the present moment. ${c[1].msg} You feel it in ${where}. This is not against you. It is the current moving you truer.\n\n${c[2].name} arrived last, from ahead. ${c[2].msg} ${season.charAt(0).toUpperCase() + season.slice(1)} is exactly when this kind of light begins.\n\nThe stars heard you before you spoke.\n\nLiora`;
   }
   if (hash === 1) {
-    return `To ${n}, who asked about ${intent}:\n\nThe first card that arrived, ${c[0].name}, carries this: ${c[0].msg} That is your answer's root.\n\nThen came ${c[1].name}, moving through your ${where}. ${c[1].msg} The feeling you have been living is not confusion, it is navigation.\n\nAnd finally, ${c[2].name} stands at the opening ahead. ${c[2].msg} In ${season}, that means something is very close now.\n\nTrust what you already knew before you drew these cards.\n\nLiora`;
+    return `To ${n}, who asked about ${intent}:\n\nThe first card that arrived, ${c[0].name}, carries this: ${c[0].msg} That is your answer's root.\n\nThen came ${c[1].name}, moving through ${where}. ${c[1].msg} The feeling you have been living is not confusion, it is navigation.\n\nAnd finally, ${c[2].name} stands at the opening ahead. ${c[2].msg} In ${season}, that means something is very close now.\n\nTrust what you already knew before you drew these cards.\n\nLiora`;
   }
   if (hash === 2) {
-    return `Dear ${n}, what you brought tonight, ${intent}, is older than you think.\n\n${c[0].name} speaks to the echo beneath it: ${c[0].msg} This is not a new wound. It is an old remembering asking to complete itself.\n\nIn the present, ${c[1].name} names what is moving through you right now. ${c[1].msg} You have been feeling this ${where}. That feeling is correct.\n\nWhat is being born: ${c[2].name}. ${c[2].msg} You are in ${season}. The timing is not an accident.\n\nNothing arriving now is arriving too early or too late.\n\nLiora`;
+    return `Dear ${n}, what you brought tonight, ${intent}, is older than you think.\n\n${c[0].name} speaks to the echo beneath it: ${c[0].msg} This is not a new wound. It is an old remembering asking to complete itself.\n\nIn the present, ${c[1].name} names what is moving through you right now. ${c[1].msg} You have been feeling this in ${where}. That feeling is correct.\n\nWhat is being born: ${c[2].name}. ${c[2].msg} You are in ${season}. The timing is not an accident.\n\nNothing arriving now is arriving too early or too late.\n\nLiora`;
   }
   if (hash === 3) {
-    return `Beloved ${n}, you said it lives ${where}. The cards agree.\n\nWhat you carry: ${c[0].name}. ${c[0].msg} The body holds what the mind has not yet translated.\n\nWhat is moving through you now: ${c[1].name}. ${c[1].msg} The discomfort is not a sign you are wrong, it is the sign you are changing.\n\nWhat is being born: ${c[2].name}. ${c[2].msg} In ${season}, something that has been forming quietly is almost ready to be named.\n\nListen to the body. It has always been the oracle.\n\nLiora`;
+    return `Beloved ${n}, you said it lives in ${where}. The cards agree.\n\nWhat you carry: ${c[0].name}. ${c[0].msg} The body holds what the mind has not yet translated.\n\nWhat is moving through you now: ${c[1].name}. ${c[1].msg} The discomfort is not a sign you are wrong, it is the sign you are changing.\n\nWhat is being born: ${c[2].name}. ${c[2].msg} In ${season}, something that has been forming quietly is almost ready to be named.\n\nListen to the body. It has always been the oracle.\n\nLiora`;
   }
   return `${n},\n\nYou drew ${c[0].name}. ${c[0].whisper}\n\nThen ${c[1].name}. ${c[1].whisper}\n\nAnd ${c[2].name}. ${c[2].whisper}\n\nThree whispers for a soul in ${season}, carrying ${intent}. They do not contradict each other. They are the same truth, spoken three ways.\n\nYou already know what they mean.\n\nLiora`;
 }
