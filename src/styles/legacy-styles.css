@@ -20,11 +20,9 @@
   --dark:#2A2420;
   --dark-2:#211C18;
 
-  --serif:'Newsreader', Georgia, serif;
-  --sans:'Hanken Grotesk', system-ui, sans-serif;
-  --script:'Sacramento', cursive;
-  --formal:'Pinyon Script', cursive;
-  --hand:'Caveat', cursive;
+  /* --serif/--sans/--script/--formal/--hand are defined in fonts.css,
+     which wires them to next/font's self-hosted files. Not redeclared
+     here to avoid a duplicate :root fighting it in the cascade. */
 
   --maxw:1280px;
   --gutter:clamp(22px, 5vw, 96px);

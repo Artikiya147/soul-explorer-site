@@ -113,7 +113,7 @@
 .rc .dot{width:30px;height:30px;border-radius:50%;background:linear-gradient(160deg,#3a3357,#211c33);border:1px solid rgba(214,200,245,.4);}
 .rc .rc-t{font-family:var(--serif);font-style:italic;font-size:16px;color:#ECE6F2;}
 .rc .rc-t small{display:block;font-family:var(--sans);font-style:normal;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#B9AFD6;}
-.reading-body{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.75;color:#ECE6F2;max-width:60ch;margin:0 auto;}
+.reading-body{font-family:var(--sans);font-size:clamp(18px,2vw,22px);line-height:1.75;color:#ECE6F2;max-width:60ch;margin:0 auto;}
 .reading-body p{margin:0 0 22px;}
 .reading-body .sig{font-family:var(--script);font-size:38px;color:#C8BCE6;margin-top:10px;}
 .reading-loading{text-align:center;padding:30px 0;}

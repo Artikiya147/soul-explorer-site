@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import {
-  Newsreader,
-  Hanken_Grotesk,
+  Italiana,
+  Tenor_Sans,
   Sacramento,
-  Pinyon_Script,
-  Caveat,
+  Petit_Formal_Script,
 } from "next/font/google";
 import "../styles/legacy-styles.css";
 import "../styles/legacy-pages.css";
@@ -18,17 +17,16 @@ import { CookieBanner } from "@/components/cookie-banner";
 import { EditModeToggle } from "@/components/edit-mode-toggle";
 import { WhatsAppBubble } from "@/components/whatsapp-bubble";
 
-const newsreader = Newsreader({
+const italiana = Italiana({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-newsreader",
+  weight: "400",
+  variable: "--font-italiana",
 });
 
-const hanken = Hanken_Grotesk({
+const tenor = Tenor_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-hanken",
+  weight: "400",
+  variable: "--font-tenor",
 });
 
 const sacramento = Sacramento({
@@ -37,16 +35,10 @@ const sacramento = Sacramento({
   variable: "--font-sacramento",
 });
 
-const pinyon = Pinyon_Script({
+const petitFormalScript = Petit_Formal_Script({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-pinyon",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-caveat",
+  variable: "--font-petit-formal-script",
 });
 
 export const metadata: Metadata = {
@@ -59,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${hanken.variable} ${sacramento.variable} ${pinyon.variable} ${caveat.variable}`}
+      className={`${italiana.variable} ${tenor.variable} ${sacramento.variable} ${petitFormalScript.variable}`}
       suppressHydrationWarning
     >
       <body className="paper grain">
